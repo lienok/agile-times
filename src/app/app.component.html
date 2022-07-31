@@ -1,40 +1,28 @@
-<div class="ui-g ui-g-nopad" id="header">
+<div class="grid" id="header">
 
-  <div class="ui-g-10">
+  <div class="col-10">
     <img src="assets/img/logo-clear.svg" id="top-logo"/>
   </div>
-  <div class="ui-g-2" id="notifications">
+<!--  <div class="col-2" id="notifications">-->
 
-  </div>
+<!--  </div>-->
 </div>
 
-<div class="ui-g ui-g-nopad">
-
-  <div class="ui-g-2 ui-g-nopad" id="sidegutter">
-
+<div class="grid">
+  <div class="col-2" id="sidegutter">
     <div id="sidenav">
-
       <p-menu #bigMenu [model]="menuItems"></p-menu>
-
     </div>
-
   </div>
 
-  <div class="ui-g-2 ui-g-nopad" id="minigutter">
-
+  <div class="col-2" id="minigutter">
     <div id="sidenav-mini">
-
       <p-menu #smallMenu [model]="miniMenuItems"></p-menu>
-
     </div>
-
   </div>
 
-
-  <div id="content-body" class="ui-g-10 ui-g-nopad">
-
+  <div id="content-body" class="col-10">
     <router-outlet></router-outlet>
-
   </div>
 </div>
 

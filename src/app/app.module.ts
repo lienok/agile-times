@@ -1,58 +1,40 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { ChartModule, MenuModule, PanelModule} from 'primeng/primeng';
-
-import { AppComponent } from './app.component';
-import {RouterModule, Routes} from "@angular/router";
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { StatisticComponent } from './statistic/statistic.component';
-import { TimesheetComponent } from './timesheet/timesheet.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SettingsComponent } from './settings/settings.component';
-
-import { AlltimesComponent } from './alltimes/alltimes.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {MenuItemContent, MenuModule} from "primeng/menu";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { FielderrorsComponent } from './fielderrors/fielderrors.component';
-
-
-const appRoutes: Routes = [
-  { path: "", redirectTo: "/dashboard", pathMatch: "full" },
-  { path: "dashboard", component: DashboardComponent },
-  { path: "alltimes", component: AlltimesComponent },
-  { path: "timesheet", component: TimesheetComponent},
-  { path: "projects", component: ProjectsComponent},
-  { path: "profile", component: ProfileComponent},
-  { path: "settings", component: SettingsComponent},
-];
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {AlltimesComponent} from './alltimes/alltimes.component';
+import {TimesheetComponent} from './timesheet/timesheet.component';
+import {ProjectsComponent} from './projects/projects.component';
+import {ProfileComponent} from './profile/profile.component';
+import {SettingsComponent} from './settings/settings.component';
+import {PanelModule} from "primeng/panel";
+import {StatisticComponent} from './statistic/statistic.component';
+import {ChartModule} from "primeng/chart";
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    StatisticComponent,
+    AlltimesComponent,
     TimesheetComponent,
     ProjectsComponent,
-    AlltimesComponent,
     ProfileComponent,
     SettingsComponent,
-    FielderrorsComponent
+    StatisticComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule,
+    AppRoutingModule,
     MenuModule,
     PanelModule,
-    ChartModule
+    ChartModule,
+    BrowserAnimationsModule
   ],
-  providers: [  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

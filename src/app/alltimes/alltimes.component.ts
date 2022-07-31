@@ -1,19 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'at-alltimes',
+  selector: 'app-alltimes',
   templateUrl: './alltimes.component.html',
-  styleUrls: ['./alltimes.component.css']
+  styleUrls: ['./alltimes.component.scss']
 })
 export class AlltimesComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor() { }
 
-
-  ngOnInit() {
-
+  ngOnInit(): void {
   }
 
 }

@@ -1,40 +1,39 @@
-<div class='ui-g'>
-    <at-statistic icon='fa-clock-o' label='My hours' value='132' colour='#00ACAC' class='ui-g-12 ui-md-6 ui-lg-3'></at-statistic>
-    <at-statistic icon='fa-users' label='Stories' value='35' colour='#2F8EE5' class='ui-g-12 ui-md-6 ui-lg-3'></at-statistic>
-    <at-statistic icon='fa-hourglass-half' label='Remaining' value='23' colour='#6C76AF' class='ui-g-12 ui-md-6 ui-lg-3'></at-statistic>
-    <at-statistic icon='fa-area-chart' label='Sprints' value='4' colour='#EFA64C' class='ui-g-12 ui-md-6 ui-lg-3'></at-statistic>
+<div class='grid'>
+  <at-statistic icon='pi-clock' label='My hours' value='132' colour='#00ACAC' class='col-12 md:col-6 lg:col-3'></at-statistic>
+  <at-statistic icon='pi-users' label='Stories' value='35' colour='#2F8EE5' class='col-12 md:col-6 lg:col-3'></at-statistic>
+  <at-statistic icon='pi-refresh' label='Remaining' value='23' colour='#6C76AF' class='col-12 md:col-6 lg:col-3'></at-statistic>
+  <at-statistic icon='pi-chart-line' label='Sprints' value='4' colour='#EFA64C' class='col-12 md:col-6 lg:col-3'></at-statistic>
 </div>
-<div class='ui-g'>
-    <p-panel header='Hours By Project (pie)' class='ui-g-12 ui-md-6'>
-        <p-chart type='pie' [data]='hoursByProjectChartData'
-        [options]='chartOptions'></p-chart>
-    </p-panel>
-    <p-panel header='Hours By Project (doughnut)' class='ui-g-12 ui-md-6'>
-        <p-chart type='doughnut' [data]='hoursByProjectChartData'></p-chart>
-    </p-panel>
+<div class='grid'>
+  <p-panel header='Hours By Project (pie)' class='col-12 md:col-6'>
+    <p-chart type='pie' [data]='hoursByProjectChartData' [options]='chartOptions'></p-chart>
+  </p-panel>
+  <p-panel header='Hours By Project (doughnut)' class='col-12 md:col-6'>
+    <p-chart type='doughnut' [data]='hoursByProjectChartData' [options]='chartOptions'></p-chart>
+  </p-panel>
 </div>
-<div class='ui-g'>
-    <p-panel header='Hours By Project (polarArea)' class='ui-g-12 ui-md-6'>
-        <p-chart type='polarArea' [data]='hoursByProjectChartData'></p-chart>
-    </p-panel>
-    <p-panel header='Hours By Team (bar)' class='ui-g-12 ui-md-6'>
-        <p-chart type='bar' [data]='hoursByTeamChartData'></p-chart>
-    </p-panel>
+<div class='grid'>
+  <p-panel header='Hours By Project (polarArea)' class='col-12 md:col-6'>
+    <p-chart type='polarArea' [data]='hoursByProjectChartData' [options]='chartOptions'></p-chart>
+  </p-panel>
+  <p-panel header='Hours By Team (bar)' class='col-12 md:col-6'>
+    <p-chart type='bar' [data]='hoursByTeamChartData' [options]='chartOptions'></p-chart>
+  </p-panel>
 </div>
-<div class='ui-g'>
-    <p-panel header='Hours By Team (radar)' class='ui-g-12 ui-md-6'>
-        <p-chart type='radar' [data]='hoursByTeamChartData'></p-chart>
-    </p-panel>
-    <p-panel header='Hours By Team (line)' class='ui-g-12 ui-md-6'>
-        <p-chart type='line' [data]='hoursByTeamChartData'></p-chart>
-    </p-panel>
+<div class='grid'>
+  <p-panel header='Hours By Team (radar)' class='col-12 md:col-6'>
+    <p-chart type='radar' [data]='hoursByTeamChartData' [options]='chartOptions'></p-chart>
+  </p-panel>
+  <p-panel header='Hours By Team (line)' class='col-12 md:col-6'>
+    <p-chart type='line' [data]='hoursByTeamChartData' [options]='chartOptions'></p-chart>
+  </p-panel>
 </div>
-<div class='ui-g'>
-    <p-panel header='Hours By Team (radar)' class='ui-g-12 ui-md-6'>
-        <p-chart type='radar' [data]='hoursByTeamChartData'></p-chart>
-    </p-panel>
-    <p-panel header='Hours By Team (mixed)' class='ui-g-12 ui-md-6'>
-        <p-chart type='bar' [data]='hoursByTeamChartDataMixed' #mixedChart
-        (onDataSelect)='onDataSelect($event)'></p-chart>
-    </p-panel>    
+<div class='grid'>
+  <p-panel header='Hours By Team (radar)' class='col-12 md:col-6'>
+    <p-chart type='radar' [data]='hoursByTeamChartData'></p-chart>
+  </p-panel>
+  <p-panel header='Hours By Team (mixed)' class='col-12 md:col-6'>
+    <p-chart type='bar' [data]='hoursByTeamChartDataMixed' #mixedChart
+             (onDataSelect)='onDataSelect($event)'></p-chart>
+  </p-panel>
 </div>

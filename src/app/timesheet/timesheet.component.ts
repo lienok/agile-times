@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'at-timesheet',
+  selector: 'app-timesheet',
   templateUrl: './timesheet.component.html',
-  styleUrls: ['./timesheet.component.css']
+  styleUrls: ['./timesheet.component.scss']
 })
-export class TimesheetComponent {
+export class TimesheetComponent implements OnInit {
 
+  constructor() { }
 
-  constructor() {
-
+  ngOnInit(): void {
   }
 
 }
