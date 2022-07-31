@@ -1,15 +1,14 @@
 <p-panel header='Settings'>
-    <div class='ui-g'>
-        <label for='notify' class='ui-g-12 ui-md-2'>Email To Notify:</label>
-        <input id='notify' class='ui-g-12 ui-md-10' placeholder='Enter an Email Address' type='email'>
-    </div>
-    <div class='ui-g'>
-        <label for='backup' class='ui-g-12 ui-md-2'>Force Backup</label>
-        <button id='backup' class='ui-g-12 ui-md-10'>Backup System Now</button>
-    </div>
-    <div class='ui-g'>
-        <label for='statistic' class='ui-g-12 ui-md-2'>Uptime Stats:</label>
-        <at-statistic id='statistic' icon='fa-cloud-download' label='Day uptime' value='20' colour='#00ACAC'>
-        </at-statistic>
-    </div>
+  <div class='grid'>
+    <label for='notify' class='col-12 md:col-2'>Email To Notify:</label>
+    <input id='notify' class='col-12 md:col-10' placeholder='Enter an Email Address' type='email'>
+  </div>
+  <div class='grid'>
+    <label for='backup' class='col-12 md:col-2'>Force Backup</label>
+    <button id='backup' class='col-12 md:col-10'>Backup System Now</button>
+  </div>
+  <div class='grid'>
+    <label for='statistic' class='col-12 md:col-2'>Uptime Stats:</label>
+    <at-statistic id='statistic' icon='pi-cloud-download' label='Day uptime' value='20' colour='#00ACAC'></at-statistic>
+  </div>
 </p-panel>

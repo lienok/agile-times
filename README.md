@@ -1,17 +1,27 @@
-# AgileTimes
+# AgileTimesNew
 
-Welcome to the Sample app for the Pluralsight Course [Building Beautiful Angular Apps with PrimeNG](https://app.pluralsight.com/courses/angular-apps-prime-ng).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
-The course was officially released on Thursday, Aug 24, 2017.
+## Development server
 
-I'll keep this page updated with breaking changes as the course ages.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
- 
-## Starter Kit
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-* A basic menu template routing to blank components
-* Styling for the shell, but none of the component CSS - which you insert as you go
-* Blank component code shells for you to insert code as you follow along 
+## Build
 
-Go for it!
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,15 +1,30 @@
-import { Component } from '@angular/core';
-
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'at-projects',
+  selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent  {
+export class ProjectsComponent implements OnInit {
+
+  projectForm!: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.projectForm = this.fb.group({
+      projectId: ['', [Validators.required, Validators.minLength(5)]],
+      description: ['']
+    })
+  }
+
+  hasFormErrors() {
+    return !this.projectForm.valid;
+  }
 
 
-  constructor() { }
-
-
+  onSubmit() {
+    alert(JSON.stringify(this.projectForm.value));
+  }
 }

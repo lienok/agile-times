@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { UIChart } from 'primeng/primeng';
-import { interval, Observable } from 'rxjs';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {UIChart} from "primeng/chart";
+import {interval} from "rxjs";
 
 const DEFAULT_COLORS = ['#3366CC', '#DC3912', '#FF9900', '#109618', '#990099',
   '#3B3EAC', '#0099C6', '#DD4477', '#66AA00', '#B82E2E',
@@ -8,14 +8,13 @@ const DEFAULT_COLORS = ['#3366CC', '#DC3912', '#FF9900', '#109618', '#990099',
   '#E67300', '#8B0707', '#329262', '#5574A6', '#3B3EAC']
 
 @Component({
-  selector: 'at-dashboard',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements AfterViewInit {
 
-
-  @ViewChild('mixedChart') mixedChart: UIChart;
+  @ViewChild('mixedChart') mixedChart!: UIChart;
 
   hoursByProject = [
     { id: 1, name: 'Payroll App', hoursSpent: 8 },
@@ -30,7 +29,9 @@ export class DashboardComponent implements AfterViewInit {
     },
     legend: {
       position: 'bottom'
-    }
+    },
+    responsive: false,
+    maintainAspectRatio: false
   }
 
   pieLabels = this.hoursByProject.map(proj => proj.name);
@@ -38,11 +39,11 @@ export class DashboardComponent implements AfterViewInit {
   pieColours = this.configureDefaultColours(this.pieData);
 
   private configureDefaultColours(data: number[]): string[] {
-    let customColours = [];
+    let customColours: string[] = [];
 
     if (data.length) {
       customColours = data.map((element, idx) => {
-        //DEFAULT_COLORUS[idx] - it's not enought. Becouse if more than 20 items, it would throw error when index 21 
+        //DEFAULT_COLORUS[idx] - it's not enought. Becouse if more than 20 items, it would throw error when index 21
         return DEFAULT_COLORS[idx % DEFAULT_COLORS.length];
       })
     }
@@ -96,7 +97,7 @@ export class DashboardComponent implements AfterViewInit {
     ]
   }
 
-  onDataSelect(event) {
+  onDataSelect(event:any) {
     let dataSetIndex = event.element._datasetIndex;
     let dataItemIndex = event.element._index;
 
@@ -115,4 +116,5 @@ export class DashboardComponent implements AfterViewInit {
       this.mixedChart.refresh();
     })
   }
+
 }
