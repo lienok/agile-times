@@ -31,6 +31,15 @@
       </div>
     </div>
 
+    <div class="grid">
+      <p-fieldset legend="Project Type" class="col-12" [toggleable]="true">
+        <p-radioButton name="projectType" label="Front End" value="F" formControlName="projectType"></p-radioButton>
+        <p-radioButton name="projectType" label="Backend End" value="B" formControlName="projectType"></p-radioButton>
+        <p-radioButton name="projectType" label="Operations" value="O" formControlName="projectType"></p-radioButton>
+      </p-fieldset>
+    </div>
+
+
 
     <p-button icon="pi pi-save" type="submit"  [disabled]="hasFormErrors()">Save</p-button>
   </p-panel>
