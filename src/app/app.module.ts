@@ -24,6 +24,7 @@ import {EditorModule} from 'primeng/editor';
 import {CalendarModule} from 'primeng/calendar';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {FieldsetModule} from 'primeng/fieldset';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 const appRoutes: Routes = [
@@ -63,7 +64,8 @@ const appRoutes: Routes = [
     EditorModule,
     CalendarModule,
     RadioButtonModule,
-    FieldsetModule
+    FieldsetModule,
+    DropdownModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

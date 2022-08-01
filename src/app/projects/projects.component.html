@@ -39,6 +39,12 @@
       </p-fieldset>
     </div>
 
+    <div class="grid">
+      <label for="devs" class="col-12 md:col-2">Assigned Devs</label>
+      <p-dropdown id="devs" [options]="allDevs" [filter]="true"
+                  formControlName="selectedDevs" class="col-12 md:col-10"></p-dropdown>
+    </div>
+
 
 
     <p-button icon="pi pi-save" type="submit"  [disabled]="hasFormErrors()">Save</p-button>
