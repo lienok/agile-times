@@ -7,8 +7,7 @@
                    class="col-12 md:col-5"></p-inputMask>
 
       <div class="col-12 md:col-5">
-        <app-fielderrors [form]="projectForm" [field]="'description'" [nicename]="'Description'"></app-fielderrors>
-
+        <app-fielderrors [form]="projectForm" [field]="'projectId'" [nicename]="'Project ID'"></app-fielderrors>
       </div>
 
     </div>
@@ -17,8 +16,18 @@
       <label for="description" class="col-12">Description</label>
       <p-editor id="description" formControlName="description" class="col-12" [style]="{'height':'200px'}"></p-editor>
 
-      <div class="col-12">
+      <div class="col-12 md:col-5">
         <app-fielderrors [form]="projectForm" field="description" nicename="Description"> </app-fielderrors>
+      </div>
+    </div>
+
+    <div class="grid">
+      <label for="startDate" class="col-12 md:col-2">Start Date</label>
+      <p-calendar [showIcon]="true" id="startDate" formControlName="startDate" dateFormat="dd.mm.yy"
+                  class="col-12 md:col-5" [minDate]="minProjectDate"></p-calendar>
+
+      <div class="col-12 md:col-5">
+        <app-fielderrors [form]="projectForm" field="startDate" nicename="Start Date"> </app-fielderrors>
       </div>
     </div>
 

@@ -21,6 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {ButtonModule} from 'primeng/button';
 import {InputMaskModule} from 'primeng/inputmask';
 import {EditorModule} from 'primeng/editor';
+import {CalendarModule} from 'primeng/calendar';
 
 
 const appRoutes: Routes = [
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     ChartModule,
     ButtonModule,
     InputMaskModule,
-    EditorModule
+    EditorModule,
+    CalendarModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

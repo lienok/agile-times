@@ -9,13 +9,15 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class ProjectsComponent implements OnInit {
 
   projectForm!: FormGroup;
+  minProjectDate = new Date();
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.projectForm = this.fb.group({
       projectId: ['', [Validators.required, Validators.minLength(5)]],
-      description: ['', [Validators.required, Validators.maxLength(140)]]
+      description: ['', [Validators.required, Validators.maxLength(140)]],
+      startDate: ['', [Validators.required]]
     })
   }
 
