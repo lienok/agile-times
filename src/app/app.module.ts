@@ -20,6 +20,7 @@ import {ChartModule} from 'primeng/chart';
 import {HttpClientModule} from '@angular/common/http';
 import {ButtonModule} from 'primeng/button';
 import {InputMaskModule} from 'primeng/inputmask';
+import {EditorModule} from 'primeng/editor';
 
 
 const appRoutes: Routes = [
@@ -55,7 +56,8 @@ const appRoutes: Routes = [
     PanelModule,
     ChartModule,
     ButtonModule,
-    InputMaskModule
+    InputMaskModule,
+    EditorModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

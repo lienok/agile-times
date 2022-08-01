@@ -1,21 +1,28 @@
 <form [formGroup]="projectForm" (ngSubmit)="onSubmit()" action="" class="grid">
   <p-panel header="Add Project" class="col-12">
     <div class="grid">
+
       <label for="projectId" class="col-12 md:col-2">Project Id*</label>
       <p-inputMask mask="aaa-999" id="projectId" formControlName="projectId" placeholder="ABC-123" slotChar="?"
                    class="col-12 md:col-5"></p-inputMask>
 
       <div class="col-12 md:col-5">
-        <app-fielderrors [form]="projectForm" [field]="'projectId'" [nicename]="'Project ID'"></app-fielderrors>
+        <app-fielderrors [form]="projectForm" [field]="'description'" [nicename]="'Description'"></app-fielderrors>
+
       </div>
+
     </div>
+
     <div class="grid">
       <label for="description" class="col-12">Description</label>
-      <textarea pInputTextarea id="description" formControlName="description" class="col-12" rows="10"></textarea>
-      <div class="col-12 md:col-5">
-        <app-fielderrors [form]="projectForm" [field]="'description'" [nicename]="'Description'"></app-fielderrors>
+      <p-editor id="description" formControlName="description" class="col-12" [style]="{'height':'200px'}"></p-editor>
+
+      <div class="col-12">
+        <app-fielderrors [form]="projectForm" field="description" nicename="Description"> </app-fielderrors>
       </div>
     </div>
+
+
     <p-button icon="pi pi-save" type="submit"  [disabled]="hasFormErrors()">Save</p-button>
   </p-panel>
 </form>
