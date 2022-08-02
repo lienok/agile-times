@@ -41,9 +41,17 @@
 
     <div class="grid">
       <label for="devs" class="col-12 md:col-2">Assigned Devs</label>
-      <p-multiSelect id="devs" [options]="allDevs" [filter]="true" defaultLabel="Select a Dev or Two"
-                  formControlName="selectedDevs" class="col-12 md:col-10"></p-multiSelect>
+      <p-listbox id="devs" [options]="allDevs" [multiple]="true" [filter]="true"
+                  formControlName="selectedDevs" class="col-12 md:col-10">
+        <ng-template let-dev pTemplate="item">
+          <img src="http://i.pravatar.cc/100?u={{dev.label}}"
+               class="avatar" />
+          <span class="devName">{{dev.value}}</span>
+        </ng-template>
+      </p-listbox>
     </div>
+
+    <div class="grid"></div>
 
 
 

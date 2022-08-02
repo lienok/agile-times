@@ -26,6 +26,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {FieldsetModule} from 'primeng/fieldset';
 import {DropdownModule} from 'primeng/dropdown';
 import {MultiSelectModule} from 'primeng/multiselect';
+import {ListboxModule} from 'primeng/listbox';
 
 
 const appRoutes: Routes = [
@@ -67,7 +68,8 @@ const appRoutes: Routes = [
     RadioButtonModule,
     FieldsetModule,
     DropdownModule,
-    MultiSelectModule
+    MultiSelectModule,
+    ListboxModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

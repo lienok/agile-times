@@ -33,7 +33,8 @@ export class ProjectsComponent implements OnInit {
       description: ['intro', [Validators.required, Validators.maxLength(140)]],
       startDate: [new Date(), Validators.required],
       projectType: ['B'],
-      selectedDevs: [[]]
+      selectedDevs: [[]],
+      rating: [3]
     })
   }
 
